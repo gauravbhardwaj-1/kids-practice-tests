@@ -1,5 +1,39 @@
+
 <!DOCTYPE html>
-<html>
-  <head><title>Math Quiz</title></head>
-  <body><h1>Coming Soon!</h1></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Math Quiz</h1>
+
+    <div id="setup">
+      <label for="quizType">Choose Quiz Type:</label>
+      <select id="quizType">
+        <option value="basic">Basic Multiplication</option>
+        <option value="advanced">Advanced Multiplication</option>
+        <option value="division">Division</option>
+      </select>
+
+      <label for="numQuestions">Number of Questions:</label>
+      <input type="number" id="numQuestions" min="1" max="50" />
+
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+      <p id="questionText"></p>
+      <input type="number" id="answerInput" placeholder="Your answer" />
+      <button onclick="submitAnswer()">Submit</button>
+    </div>
+
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
